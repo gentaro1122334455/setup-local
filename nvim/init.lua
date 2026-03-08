@@ -1,3 +1,4 @@
+vim.g.mapleader = " "
 vim.opt.clipboard = "unnamedplus"
 vim.opt.guicursor = "i:ver25"
 
