@@ -1,9 +1,7 @@
 # Development Environment Setup
 
-## Installation
-
-Clone this repository and run the following command:
-
-```bash
-chmod +x local-setup.sh
-./local-setup.sh
+## 必要なプラグイン
+- ripgrep
+- fd
+- node
+- npm
