@@ -8,7 +8,7 @@ config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 13.0
 
 -- 背景透過
-config.window_background_opacity = 0.7
+config.window_background_opacity = 0.85
 
 -- macOS blur
 config.macos_window_background_blur = 20
