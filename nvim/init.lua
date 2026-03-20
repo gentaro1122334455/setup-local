@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 vim.opt.clipboard = "unnamedplus"
 vim.opt.guicursor = "i:ver25"
 
@@ -8,3 +9,8 @@ vim.opt.number = true
 vim.opt.relativenumber = false
 vim.cmd("colorscheme tokyonight")
 vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>fy", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  print("Copied: " .. path)
+end, { desc = "Copy current file path" })
