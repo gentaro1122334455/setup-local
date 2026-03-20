@@ -14,3 +14,13 @@ vim.keymap.set("n", "<leader>fy", function()
   vim.fn.setreg("+", path)
   print("Copied: " .. path)
 end, { desc = "Copy current file path" })
+vim.o.autoread = true
+
+vim.api.nvim_create_autocmd({
+  "FocusGained",
+  "BufEnter",
+  "CursorHold",
+  "CursorHoldI",
+}, {
+  command = "checktime",
+})
