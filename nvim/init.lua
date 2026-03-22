@@ -2,6 +2,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.opt.clipboard = "unnamedplus"
 vim.opt.guicursor = "i:ver25"
+vim.opt.encoding = "utf-8"
+vim.opt.fileencodings = { "utf-8", "cp932", "shift_jis", "latin1" }
 
 require("config.lazy")
 
