@@ -13,6 +13,10 @@ return {
           hide_dotfiles = false,
           hide_gitignored = false,
         },
+        follow_current_file = {
+          enabled = true,
+          leave_dirs_open = false,
+        },
       },
     })
   end,

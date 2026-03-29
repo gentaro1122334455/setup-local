@@ -7,8 +7,8 @@ vim.opt.fileencodings = { "utf-8", "cp932", "shift_jis", "latin1" }
 
 require("config.lazy")
 
-vim.opt.number = true
-vim.opt.relativenumber = false
+-- vim.opt.number = true
+-- vim.opt.relativenumber = false
 vim.cmd("colorscheme tokyonight")
 vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>fy", function()
