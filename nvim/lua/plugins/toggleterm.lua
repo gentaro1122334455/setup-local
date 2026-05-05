@@ -3,23 +3,18 @@ return {
   version = "*",
   config = function()
     require("toggleterm").setup({
-      open_mapping = [[<c-\>]],
-      direction = "float",
+      direction = "vertical",
+      size = function()
+        return math.floor(vim.o.columns * 0.5)
+      end,
       start_in_insert = true,
-      insert_mappings = true,
-      float_opts = {
-        border = "rounded",
-        width = function()
-          return math.floor(vim.o.columns * 0.85)
-        end,
-        height = function()
-          return math.floor(vim.o.lines * 0.85)
-        end,
-      },
     })
 
-    vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<CR>", { desc = "Toggle Terminal" })
-    -- ターミナルから抜ける
+    -- サイズ強制反映
+    vim.keymap.set("n", "<leader>t", function()
+      require("toggleterm").toggle(1, math.floor(vim.o.columns * 0.5), vim.fn.getcwd(), "vertical")
+    end)
+
     vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
   end,
 }
