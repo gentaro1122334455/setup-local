@@ -22,6 +22,9 @@ require("lazy").setup({
     -- （Go LSP / test / fmt 全部入り）
     { import = "lazyvim.plugins.extras.lang.go" },
 
+    -- Python: Pyright + Ruff（gd で定義ジャンプ、Mason でサーバー取得）
+    { import = "lazyvim.plugins.extras.lang.python" },
+
     -- import/override with your plugins
     { import = "plugins" },
   },
